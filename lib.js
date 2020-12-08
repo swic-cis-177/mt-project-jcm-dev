@@ -3,13 +3,14 @@ const template = document.querySelector("template");
 
 export const createCustomerTable = (customerData) => {
   tbody.innerText = " ";
-  customerData.forEach(({ name, product, date }) => {
+  customerData.forEach(({ name, product, date, next }) => {
     const newCustomerRow = template.content.cloneNode(true);
     const newCustomerTDs = newCustomerRow.querySelectorAll("td");
 
     newCustomerTDs[0].textContent = name;
     newCustomerTDs[1].textContent = product;
     newCustomerTDs[2].textContent = date;
+    newCustomerTDs[3].textContent = next;
     tbody.appendChild(newCustomerRow);
   });
 };
