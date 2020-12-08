@@ -1,7 +1,7 @@
 const tbody = document.querySelector("tbody");
 const template = document.querySelector("template");
 
-export default (customerData) => {
+export const createCustomerTable = (customerData) => {
   tbody.innerText = " ";
   customerData.forEach(({ name, product, date }) => {
     const newCustomerRow = template.content.cloneNode(true);
@@ -13,3 +13,20 @@ export default (customerData) => {
     tbody.appendChild(newCustomerRow);
   });
 };
+
+const processForm = (elements) =>
+  Array.from(elements)
+    .filter(({ id }) => id)
+    .reduce(
+      (deets, { id, value }) =>
+        // Spread out the accumulated form details and add the next id/value from form input
+        ({
+          ...deets,
+          [id]: value,
+        }),
+      {}
+    );
+
+export const generateCustomer = (elements) => ({
+  ...processForm(elements),
+});
