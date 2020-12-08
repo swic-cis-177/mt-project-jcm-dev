@@ -2,19 +2,19 @@ export default [
   {
     name: "Josh Meyer",
     product: "Fertilizer",
-    date: "01/01/01",
-    next: "03/01/01",
+    date: "1/1/2001",
+    next: "3/1/2001",
   },
   {
     name: "John Johnson",
     product: "Weed Control",
-    date: "01/02/01",
-    next: "02/01/01",
+    date: "1/2/2001",
+    next: "2/1/2001",
   },
   {
     name: "Sara Silvers",
     product: "Fertilizer",
-    date: "01/03/01",
-    next: "03/01/01",
+    date: "1/3/2001",
+    next: "3/1/2001",
   },
 ];
