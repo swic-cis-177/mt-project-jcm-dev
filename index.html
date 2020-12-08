@@ -15,6 +15,23 @@
   </head>
   <body>
 
+    <form>
+      <fieldset>
+        <legend>Lawn Application Entry Form</legend>
+        <label for="date">Date:</label>
+        <input type="text" id="date" placeholder="Application Date (MM/DD/YYYY)">
+        <br><br>
+        <label for="type">Product Type:</label>
+        <input type="text" id="product" placeholder="Product Type (Fertilizer or Weed Control">
+        <br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Customer Name">
+        <br><br>
+        <button type="submit" class="pure-button">Submit</button>
+      </fieldset>
+    </form>
+
+
     <table id="customer-table">
       <thead>
         <tr>
@@ -29,21 +46,7 @@
       </tbody>
     </table>
 
-  <form>
-    <fieldset>
-      <legend>Lawn Application Entry Form</legend>
-      <label for="date">Date:</label>
-      <input type="text" id="date">
-      <br><br>
-      <label for="type">Product Type:</label>
-      <input type="text" id="product">
-      <br><br>
-      <label for="name">Name:</label>
-      <input type="text" id="name">
-      <br><br>
-      <button type="submit" class="pure-button">Submit</button>
-    </fieldset>
-  </form>
+
 
   <template id="customer-row">
     <tr>
