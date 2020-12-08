@@ -1,5 +1,24 @@
-form {
+body {
+  background-image: url("../Images/green2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+fieldset,
+table {
+  background-color: rgb(185, 245, 179);
+  color: rgb(15, 80, 40);
   font-family: Courier New, courier, monospace;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
 }
 
 fieldset {
@@ -11,9 +30,11 @@ fieldset {
 }
 
 label {
-  /* Uniform size & alignment */
   display: inline-block;
+  left: -9999px;
+  position: absolute;
   text-align: right;
+  top: -9999px;
   width: 90px;
 }
 
