@@ -1,6 +1,18 @@
 import data from "./data.js";
+import { createCustomerTable, generateCustomer } from "./lib.js";
 
 console.log(data);
+createCustomerTable(data);
+
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  data.push(
+    // Send 'name' and 'score' from the form
+    generateCustomer(event.target.elements)
+  );
+  createCustomerTable(data);
+});
 
 // const date = document.querySelector("#date");
 
