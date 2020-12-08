@@ -30,4 +30,21 @@ const processForm = (elements) =>
 
 export const generateCustomer = (elements) => ({
   ...processForm(elements),
+  next: setDate(processForm(elements).product, processForm(elements).date),
 });
+
+const setDate = (product, date) => {
+  console.log(product);
+  if (product.toLowerCase() == "fertilizer") {
+    const objectDate = new Date(date);
+    objectDate.setMonth(objectDate.getMonth() + 2);
+    console.log(objectDate);
+    return objectDate.toLocaleDateString();
+  }
+  if (product.toLowerCase() == "weed control") {
+    const objectDate = new Date(date);
+    objectDate.setMonth(objectDate.getMonth() + 1);
+    console.log(objectDate);
+    return objectDate.toLocaleDateString();
+  }
+};
